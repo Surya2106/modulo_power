@@ -1,0 +1,15 @@
+def large_power(a,b,m):
+  ans = 1
+  a = a%m
+  
+  while b>0:
+    if b&1:
+      ans = (ans*a)%m
+    a = (a*a)%m
+    b>>=1
+  
+  return ans
+
+
+a,b,m = map(int,input().split())
+print(large_power(a,b,m))
